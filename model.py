@@ -5,7 +5,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 # Reading the file
-data = pd.read_csv('./waterQuality1.csv')
+!wget -q 'https://raw.githubusercontent.com/juhxlz/water-quality-model/main/water-quality.csv' -O 'water-quality.csv'
+
+data = pd.read_csv('water-quality.csv')
 
 # Droping rows that have invalid values
 data = data.drop(index=[7551, 7568, 7890])
